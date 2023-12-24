@@ -3,8 +3,8 @@ import Editor from './Editor';
 
 function App() {
   const[html, setHtml] = useState("")
-  // const[html, setHtml] = useState("")
-  // const[html, setHtml] = useState("")
+  const[css, setCss] = useState("")
+  const[js, setJs] = useState("") 
 
   return (
     <>
@@ -13,15 +13,25 @@ function App() {
         language = 'xml'
         displayName='HTML'
         value={html}
-        onchange={setHtml}
+        onChange={setHtml}
       />
-      <Editor />
-      <Editor />
+      <Editor 
+        language = 'css'
+        displayName='CSS'
+        value={css}
+        onChange={setCss}
+      />
+      <Editor
+        language = 'javascript'
+        displayName='JS'
+        value={js}
+        onChange={setJs}
+      />
     </div>
     <div className='pane'>
       <iframe 
         title='output'
-        sandbox='allow-scripts'  //fro security reasons to avoid cookies of iframe
+        sandbox='allow-scripts'  //for security reasons to avoid cookies of iframe
         width="100%"
         height="100%"
 

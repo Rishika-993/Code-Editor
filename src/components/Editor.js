@@ -11,11 +11,11 @@ export default function Editor(props) {
         language,
         displayName,
         value,
-        onchange
+        onChange
     } = props
 
     function handleChange(editor, data, value){
-        onchange(value)
+        onChange(value)
     }
   return (
     <div  className='editor-container'>
